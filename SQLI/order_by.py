@@ -1,5 +1,5 @@
 import requests
-dict = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+dict = "abcdefghijklmnopqrstuvwxyz1234567890_"
 url = "http://167.71.131.167:32434/api/list"
 # HTB{0r______________________}
 
@@ -18,12 +18,6 @@ while True:
             print(each)
             flag += each
             break
-
-    if oldFlag == flag:
-        flag += '_'
-
-    oldFlag = flag
-
     print("HTB{"+flag+"}")
 
 print(flag)
